@@ -4,6 +4,7 @@ gem 'forem-theme-base', git: "https://github.com/radar/forem-theme-base", branch
 ruby "3.1.2"
 gemspec
 
+
 gem 'pry-rails'
 gem 'pry-nav'
 gem 'select2-rails', '~> 4.0', '>= 4.0.13'
