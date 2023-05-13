@@ -1,12 +1,12 @@
 source "https://rubygems.org"
 
-gem 'forem-theme-base', :git => "git://github.com/radar/forem-theme-base", :branch => "master"
+gem 'forem-theme-base', git: "https://github.com/radar/forem-theme-base", branch: "master"
 
 gemspec
 
 gem 'pry-rails'
 gem 'pry-nav'
-gem 'select2-rails', '~> 3.5.4'
+gem 'select2-rails', '~> 4.0', '>= 4.0.13'
 
 platforms :jruby do
   gem "activerecord-jdbc-adapter", :require => false
@@ -15,9 +15,9 @@ end
 group :test do
   platforms :ruby, :mingw do
     gem "forem-redcarpet"
-    gem "mysql2"
-    gem "pg"
-    gem "sqlite3"
+    gem "mysql2", "~> 0.5"
+    gem "pg", "~> 1.5"
+    gem "sqlite3", "~> 1.4"
   end
 
   platforms :jruby do
@@ -29,5 +29,5 @@ group :test do
 end
 
 if RUBY_VERSION < '1.9.2'
-  gem 'nokogiri', '~> 1.5.9'
+  gem 'nokogiri', '~> 1.11.5'
 end

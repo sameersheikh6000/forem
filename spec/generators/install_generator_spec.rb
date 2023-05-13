@@ -42,8 +42,8 @@ describe Forem::Generators::InstallGenerator do
     expect(Forem::Forum.count).to eq(0)
     expect(Forem::Topic.count).to eq(0)
 
-    FactoryGirl.create(:user)
-    FactoryGirl.create(:category)
+    FactoryBot.create(:user)
+    FactoryBot.create(:category)
     Forem::Engine.load_seed
 
     expect(Forem::Forum.count).to eq(1)
@@ -63,7 +63,7 @@ describe Forem::Generators::InstallGenerator do
     load "#{Rails.root}/app/models/user.rb"
 
     # Generate a user so the Forem seed can run fully.
-    FactoryGirl.create(:user)
+    FactoryBot.create(:user)
     Forem::Engine.load_seed
 
     expect(Forem::Forum.count).to eq(1)

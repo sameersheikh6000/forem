@@ -7,7 +7,7 @@ describe Forem::TopicsController do
     let!(:forum) { create(:forum) }
     let!(:topic) { create(:topic) }
     before do
-      user = FactoryGirl.create(:user)
+      user = FactoryBot.create(:user)
       sign_in(user)
       allow(controller.current_user).to receive_messages :can_read_topic? => false
     end
@@ -20,9 +20,9 @@ describe Forem::TopicsController do
   end
 
   context "permissions" do
-    let(:forum) { FactoryGirl.create(:forum) }
-    let(:topic) { FactoryGirl.create(:approved_topic, :forum => forum) }
-    let(:user) { FactoryGirl.create(:user) }
+    let(:forum) { FactoryBot.create(:forum) }
+    let(:topic) { FactoryBot.create(:approved_topic, :forum => forum) }
+    let(:user) { FactoryBot.create(:user) }
 
     before do
       allow(controller).to receive_messages :current_user => user
