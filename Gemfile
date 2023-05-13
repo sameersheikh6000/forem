@@ -8,7 +8,7 @@ gemspec
 gem 'pry-rails'
 gem 'pry-nav'
 gem 'select2-rails', '~> 4.0', '>= 4.0.13'
-gem 'decorators', git: 'https://github.com/sameersheikh6000/decorators.git', branch: "master"
+# gem 'decorators', git: 'https://github.com/sameersheikh6000/decorators.git', branch: "master"
 
 
 platforms :jruby do
