@@ -28,7 +28,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'sanitize', '~> 6.0', '>= 6.0.1'
   s.add_dependency 'workflow', '~> 3.0'
   s.add_dependency 'gemoji', '= 3.0'
-  s.add_dependency  'decorators', path: 'https://github.com/sameersheikh6000/decorators', branch: 'master'
+  s.add_dependency  'decorators', '~> 2.0.5', git: 'https://github.com/sameersheikh6000/decorators', branch: 'master'
   s.add_dependency 'select2-rails', '~> 4.0', '>= 4.0.13'
   s.add_dependency 'friendly_id', '~> 5.5'
   s.add_dependency 'cancancan', '~> 3.1'
