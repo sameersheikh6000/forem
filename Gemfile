@@ -1,6 +1,7 @@
 source "https://rubygems.org"
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'forem-theme-base', git: "https://github.com/radar/forem-theme-base", branch: "master"
+# gem 'forem-theme-base', git: "https://github.com/radar/forem-theme-base", branch: "master"
 ruby "3.1.2"
 gemspec
 
@@ -8,8 +9,7 @@ gemspec
 gem 'pry-rails'
 gem 'pry-nav'
 gem 'select2-rails', '~> 4.0', '>= 4.0.13'
-# gem 'decorators', git: 'https://github.com/sameersheikh6000/decorators.git', branch: "master"
-
+gem 'decorators', :github => 'sameersheikh6000/decorators', :branch =>  "master"
 
 platforms :jruby do
   gem "activerecord-jdbc-adapter", :require => false
