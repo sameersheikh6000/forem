@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-# gem 'forem-theme-base', git: "https://github.com/radar/forem-theme-base", branch: "master"
+gem 'forem-theme-base', git: "https://github.com/radar/forem-theme-base", branch: "master"
 ruby "3.1.2"
 gemspec
 
