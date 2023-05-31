@@ -1,10 +1,12 @@
 class Lib::Forem::UserClassDecorator
-    def self.included(base)
-    
+    def self.decorate(user_class)
+      user_class.class_eval do
+        # Define your decorator methods here
+      end
     end
 end
   
-Forem.user_class.include(Lib::Forem::UserClassDecorator) if Forem.user_class
+  Lib::Forem::UserClassDecorator.decorate(Forem.user_class) if Forem.user_class
   
 
 
