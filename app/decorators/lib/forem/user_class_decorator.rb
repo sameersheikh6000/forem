@@ -1,9 +1,6 @@
-module Lib
-    module Forem
-        module UserClassDecorator
-            def self.included(base)
-            end
-        end
+class Lib::Forem::UserClassDecorator
+    def self.included(base)
+    
     end
 end
   
